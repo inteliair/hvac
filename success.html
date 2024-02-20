@@ -157,51 +157,26 @@
               
 				
 				
-			<div class="col-lg-3 col-md-6">
+					<!-- Newsletter Start -->			
+				
+<div class="col-lg-3 col-md-6">
     <h5 class="text-white mb-4">Newsletter</h5>
     <p>Stay Connected for Exclusive Offers, HVAC Tips, and Industry Insights</p>
     <div class="position-relative w-100">
-        <form id="signup-form">
-            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" id="email" name="email" placeholder="Your email" required>
+        <form method="post" action="https://submit.jotform.com/submit/240495998882075">
+            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" name="q4_email" placeholder="Your email" required>
+            <input type="hidden" id="input_7" name="q7_newsletter_tag" value="newsletter list">
+            <div class="form-single-column" role="group" aria-labelledby="label_8" data-component="checkbox" style="display: none;">
+             
+                    <input type="checkbox" aria-describedby="label_8" class="form-checkbox" id="input_8_0" name="q8_newsletter[]" value="Yes" checked />
+                </span>
+            </div>
             <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Signup</button>
         </form>
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#signup-form').submit(function(e) {
-        e.preventDefault();
-        
-        var email = $('#email').val();
-        
-        $.ajax({
-            type: 'POST',
-            url: 'https://us21.api.mailchimp.com/3.0/lists/fe8c930c81/members',
-            dataType: 'json',
-            headers: {
-                'Authorization': 'Basic ' + btoa('anystring:8e0904fd07d1d40f6e0f228a5315febe-us21')
-            },
-            contentType: 'application/json',
-            data: JSON.stringify({
-                'email_address': email,
-                'status': 'subscribed'
-            }),
-            success: function(data) {
-                alert('Thank you for subscribing!');
-                // You can customize success behavior here
-            },
-            error: function(xhr, status, error) {
-                alert('Error: ' + error); // Display error message
-            }
-        });
-    });
-});
-</script>
-
-
-				
+<!-- Newsletter End -->		
 				
 				
 
