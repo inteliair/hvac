@@ -93,9 +93,9 @@
                 <div class="col-lg-6">
                    
                     </div>
-                </div>
+          </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                  <p class="fw-medium text-uppercase text-primary mb-2">Message sent&nbsp;</p>
+                  <p class="fw-medium text-uppercase text-primary mb-2">Success</p>
                     <h1 class="display-5 mb-4">Thank You</h1>
                     
                    
@@ -154,16 +154,57 @@
                     <p class="mb-1">Sunday</p>
                     <h6 class="text-light">Closed</h6>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Stay Connected for Exclusive Offers, HVAC Tips, and Industry Insights</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Signup</button>
-                    </div>
-                </div>
+              
+				
+				
+			<div class="col-lg-3 col-md-6">
+    <h5 class="text-white mb-4">Newsletter</h5>
+    <p>Stay Connected for Exclusive Offers, HVAC Tips, and Industry Insights</p>
+    <div class="position-relative w-100">
+        <form id="signup-form">
+            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" id="email" name="email" placeholder="Your email" required>
+            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Signup</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#signup-form').submit(function(e) {
+        e.preventDefault();
+        
+        var email = $('#email').val();
+        
+        $.ajax({
+            type: 'POST',
+            url: 'https://us21.api.mailchimp.com/3.0/lists/fe8c930c81/members',
+            dataType: 'json',
+            headers: {
+                'Authorization': 'Basic ' + btoa('anystring:8e0904fd07d1d40f6e0f228a5315febe-us21')
+            },
+            contentType: 'application/json',
+            data: JSON.stringify({
+                'email_address': email,
+                'status': 'subscribed'
+            }),
+            success: function(data) {
+                alert('Thank you for subscribing!');
+                // You can customize success behavior here
+            },
+            error: function(xhr, status, error) {
+                alert('Error: ' + error); // Display error message
+            }
+        });
+    });
+});
+</script>
+
+
+				
+				
+				
+
             </div>
         </div>
     </div>
