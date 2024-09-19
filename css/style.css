@@ -665,6 +665,70 @@ h6,
 }
 
 
+
+
+
+
+@media (max-width: 992px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+
+.testimonial-img {
+    display: none;
+}
+
+
+
+
+.owl-nav {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.features-section h1,
+.features-section h4,
+.features-section p,
+.features-section span {
+    color: white; /* Make titles and text white */
+}
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1196px) {
+    .col-sm-6 .d-flex {
+        flex-direction: column; /* Stack the icon and text vertically */
+        align-items: flex-start; /* Align them to the left */
+    }
+    .col-sm-6 .d-flex .ms-3 {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add some margin above the text */
+        white-space: nowrap; /* Prevent text from breaking into multiple lines */
+    }
+}
+
+.email-text, .phone-text {
+    white-space: nowrap; /* Prevents breaking into multiple lines */
+    margin-top: 5px; /* Adds spacing between the icon and the text */
+}
+
+
+
+
+
+
+
 /*** Footer ***/
 .footer {
     color: #B0B9AE;

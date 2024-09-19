@@ -61,60 +61,61 @@
     });
 
 
-    // Project carousel
-    $(".project-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        loop: true,
-        center: true,
-        dots: false,
-        nav: true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:2
-            },
-            576:{
-                items:2
-            },
-            768:{
-                items:3
-            },
-            992:{
-                items:4
-            },
-            1200:{
-                items:5
-            }
+   // Project carousel
+$(".project-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1000,
+    loop: true,
+    center: true,
+    dots: true, // Keep dots for navigation
+    nav: false, // Disable arrows (nav)
+    responsive: {
+        0:{
+            items:2
+        },
+        576:{
+            items:2
+        },
+        768:{
+            items:3
+        },
+        992:{
+            items:4
+        },
+        1200:{
+            items:5
         }
-    });
+    }
+});
 
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            }
+// Testimonials carousel
+$(".testimonial-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1000,
+    center: true,
+    dots: true, // Enable dots for navigation
+    loop: true,
+    nav: false, // Disable arrows (nav)
+    touchDrag: true, // Enable swipe/touch drag for mobile devices
+    mouseDrag: true, // Enable mouse drag for desktop
+    responsive: {
+        0:{
+            items:1  // Show 1 review on small screens
+        },
+        768:{
+            items:2  // Show 2 reviews on medium screens
         }
-    });
+    }
+});
 
     
 })(jQuery);
 
+
+
+
+
+$('#input_2').on('click', function() {
+    console.log('Button clicked');
+});
