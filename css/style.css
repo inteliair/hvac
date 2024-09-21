@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #000000;
+    --primary: #EF6C4D;
     --secondary: #BDB2AE;
     --light: #FFFFFF;
-    --dark: #101010;
+    --dark: #000;
 }
 
 .back-to-top {
@@ -196,7 +196,7 @@ h6,
     bottom: 0;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgba(251, 78, 46, 1) 0%, rgba(2, 36, 91, 0) 100%);
+    background: linear-gradient(to left, rgba(251, 78, 46, 0.5) 0%, rgba(2, 36, 91, 0) 100%);
     z-index: 1;
 }
 
@@ -252,7 +252,7 @@ h6,
 }
 
 .facts .border {
-    border-color: rgba(255, 255, 255, .1) !important;
+    border-color: #293341 !important;
 }
 
 
@@ -356,7 +356,7 @@ h6,
     font-size: 30px;
     font-weight: normal;
     color: #FFFFFF;
-    background: #000000;
+    background: #293341;
     opacity: 1;
 }
 
